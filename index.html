@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Mica</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#" class="logo">mpwebpages.com</a>
+
+        <ul class="nav-links">
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Hola, soy <span>Mica</span></h1>
+        <p>
+          Ingeniera en Computación apasionada por el diseño y desarrollo de
+          experiencias web modernas, funcionales y atractivas. Me especializo en
+          crear sitios rápidos, intuitivos y optimizados para todo tipo de
+          dispositivos, combinando creatividad con soluciones técnicas sólidas.
+          Siempre busco aprender nuevas tecnologías, mejorar procesos y
+          transformar ideas en proyectos digitales que realmente impacten.
+        </p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn">Contactame</a>
+
+          <a
+            href="https://github.com/prz0308/"
+            target="_blank"
+            class="icon-link"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://wa.me/59891530166"
+            target="_blank"
+            class="icon-link"
+            aria-label="WhatsApp"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="avatar-container">
+        <img
+          src="./imagenes/avatar.png"
+          alt="Avatar de Mica saludando"
+          class="avatar wave"
+        />
+      </div>
+    </section>
+
+    <main>
+      <!--<section id="experiencia" class="reveal">
+        <h2>Experiencia</h2>
+        <div class="card">
+          <h3>Desarrolladora Web</h3>
+          <p>
+            Desarrollo de sitios y aplicaciones web enfocadas en performance y
+            UX.
+          </p>
+          <span>2023 - Presente</span>
+        </div>
+      </section>-->
+
+      <!--<section id="proyectos" class="reveal">
+        <h2>Proyectos</h2>
+        <div class="grid">
+          <div class="project-card">
+            <h3>Proyecto 1</h3>
+            <p>Descripción breve del proyecto.</p>
+          </div>
+          <div class="project-card">
+            <h3>Proyecto 2</h3>
+            <p>Descripción breve del proyecto.</p>
+          </div>
+        </div>
+      </section>-->
+
+      <section id="sobre-mi" class="reveal about">
+        <h2>Sobre mí</h2>
+
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Soy Ingeniera en Computación con pasión por crear productos
+              digitales modernos, funcionales y bien diseñados. Me encanta
+              transformar ideas en experiencias reales que aporten valor a las
+              personas y a los negocios.
+            </p>
+
+            <p>
+              Disfruto trabajar tanto en frontend como en backend, siempre
+              buscando escribir código limpio, escalable y fácil de mantener. Me
+              motiva aprender nuevas tecnologías, enfrentar desafíos y mejorar
+              continuamente mis habilidades.
+            </p>
+
+            <p>
+              Cuando no estoy programando, seguramente me encuentres viendo
+              series, escuchando música o pensando en el próximo proyecto que
+              quiero crear. Sí, mi cerebro nunca descansa… versión developer 😅
+            </p>
+          </div>
+
+          <div class="about-image">
+            <img src="./imagenes/37732098.JPG" alt="Foto de Mica" />
+          </div>
+        </div>
+      </section>
+
+      <!--<section id="tecnologias" class="reveal">
+        <h2>Tecnologías</h2>
+        <ul class="tech-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Astro</li>
+          <li>Git</li>
+        </ul>
+      </section>-->
+
+      <section id="contacto" class="reveal contact">
+        <div class="contact-wrapper">
+          <div class="contact-form">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+              <input type="text" placeholder="Nombre" required />
+              <input type="email" placeholder="Email" required />
+              <textarea placeholder="Mensaje" required></textarea>
+              <button type="submit">Enviar</button>
+            </form>
+            <p id="form-success" class="form-success">
+              ¡Mensaje enviado correctamente! 🚀
+            </p>
+          </div>
+
+          <div class="contact-visual">
+            <div class="glow"></div>
+            <svg viewBox="0 0 200 200" class="blob">
+              <path
+                fill="#6366f1"
+                d="M45.5,-60.5C59.4,-52.3,71.3,-39.7,74.5,-25.4C77.7,-11.2,72.3,4.7,64.2,18.3C56.1,31.9,45.3,43.2,32.3,51.2C19.3,59.3,4.2,64.1,-11.7,67.3C-27.5,70.5,-45.1,72.1,-56.6,64.5C-68.1,56.9,-73.6,40.2,-74.6,24.5C-75.5,8.8,-71.9,-5.9,-64.9,-18.6C-57.9,-31.3,-47.5,-42,-35.3,-50.9C-23.1,-59.7,-9.1,-66.7,4.9,-73.2C18.8,-79.7,37.7,-85.7,45.5,-60.5Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 · mpwebpages.com</p>
+
+      <div class="footer-right">
+        <ul class="footer-links">
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <div class="footer-icons">
+          <a href="https://github.com/prz0308/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a href="https://wa.me/59891530166" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

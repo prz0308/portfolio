@@ -1,0 +1,13 @@
+hacer que el header sea con mas transparencia cuando se hace scroll
+
+agregarle modo oscuro y modo claro
+
+hacerlo responsive y con menu de hamburguesa
+
+hacer un logo
+
+seccion proyectos, experiencia y tecnologias
+
+imagen en seccion contacto
+
+
