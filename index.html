@@ -1,191 +1,474 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Mica</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="nav">
-        <a href="#" class="logo">mpwebpages.com</a>
 
-        <ul class="nav-links">
-          <li><a href="#experiencia">Experiencia</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+    <!-- Evita que Chrome/otros navegadores traduzcan la página automáticamente.
+         La auto-traducción reemplaza nodos de texto y puede pisar colores CSS
+         y traducir mal palabras sueltas como "Consultar" -> "Consultor". -->
+    <meta name="google" content="notranslate" />
+
+    <!-- SEO básico -->
+    <title>mpwebpages · Páginas web</title>
+    <meta
+      name="description"
+      content="Diseño y desarrollo de páginas web para peluquerías, restaurantes, kinesiólogos y comercios locales. Sitios simples, rápidos y listos para recibir clientes por WhatsApp."
+    />
+    <meta
+      name="keywords"
+      content="páginas web, desarrolladora freelance, diseño web Uruguay, web para negocios, página web económica"
+    />
+    <meta name="author" content="Micaela" />
+    <link rel="canonical" href="https://tudominio.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="mpwebpages · Páginas web" />
+    <meta
+      property="og:description"
+      content="Sitios web simples y efectivos para negocios locales. Recibí consultas y reservas directo por WhatsApp."
+    />
+    <meta property="og:url" content="https://tudominio.com/" />
+    <meta property="og:locale" content="es_UY" />
+    <meta property="og:image" content="og-image.jpg" />
+
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Google Fonts: Poppins (títulos) + Inter (cuerpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="notranslate" translate="no">
+    <!-- ======================================================
+       NAV — Menú fijo con scroll suave y hamburguesa en mobile
+  ======================================================= -->
+    <header class="navbar" id="navbar">
+      <nav class="nav-container">
+        <a href="#hero" class="nav-logo"
+          >mpwebpages<span class="nav-logo-accent">.com</span></a
+        >
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#portfolio" class="nav-link">Trabajos</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li>
+            <a href="#como-trabajamos" class="nav-link">Cómo trabajamos</a>
+          </li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#faq" class="nav-link">Preguntas</a></li>
+          <li><a href="#contacto" class="nav-link nav-cta">Contactar</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Hola, soy <span>Mica</span></h1>
-        <p>
-          Ingeniera en Computación apasionada por el diseño y desarrollo de
-          experiencias web modernas, funcionales y atractivas. Me especializo en
-          crear sitios rápidos, intuitivos y optimizados para todo tipo de
-          dispositivos, combinando creatividad con soluciones técnicas sólidas.
-          Siempre busco aprender nuevas tecnologías, mejorar procesos y
-          transformar ideas en proyectos digitales que realmente impacten.
-        </p>
-        <div class="hero-actions">
-          <a href="#contacto" class="btn">Contactame</a>
-
-          <a
-            href="https://github.com/prz0308/"
-            target="_blank"
-            class="icon-link"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-
-          <a
-            href="https://wa.me/59891530166"
-            target="_blank"
-            class="icon-link"
-            aria-label="WhatsApp"
-          >
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="avatar-container">
-        <img
-          src="./imagenes/avatar.png"
-          alt="Avatar de Mica saludando"
-          class="avatar wave"
-        />
-      </div>
-    </section>
-
     <main>
-      <!--<section id="experiencia" class="reveal">
-        <h2>Experiencia</h2>
-        <div class="card">
-          <h3>Desarrolladora Web</h3>
-          <p>
-            Desarrollo de sitios y aplicaciones web enfocadas en performance y
-            UX.
+      <!-- ======================================================
+         1. HERO
+    ======================================================= -->
+      <section id="hero" class="hero">
+        <div class="hero-shape" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">Diseño y desarrollo web</p>
+          <h1 class="hero-title">Páginas web para que tu negocio venda más</h1>
+          <p class="hero-subtitle">
+            Le doy presencia online a peluquerías, restaurantes, consultorios y
+            comercios locales, con sitios simples, rápidos y pensados para que
+            tus clientes te encuentren y te escriban.
           </p>
-          <span>2023 - Presente</span>
+          <a
+            href="https://wa.me/59899999999?text=Hola%20Micaela%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio"
+            class="btn btn-primary hero-cta"
+            target="_blank"
+            rel="noopener"
+          >
+            Quiero mi página web
+          </a>
+          <p class="hero-note">Respuesta por WhatsApp en el día</p>
         </div>
-      </section>-->
+      </section>
 
-      <!--<section id="proyectos" class="reveal">
-        <h2>Proyectos</h2>
-        <div class="grid">
-          <div class="project-card">
-            <h3>Proyecto 1</h3>
-            <p>Descripción breve del proyecto.</p>
-          </div>
-          <div class="project-card">
-            <h3>Proyecto 2</h3>
-            <p>Descripción breve del proyecto.</p>
-          </div>
+      <!-- ======================================================
+         2. PORTFOLIO / TRABAJOS
+    ======================================================= -->
+      <section id="portfolio" class="portfolio section">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Trabajos</p>
+          <h2 class="section-title">Negocios que ya dieron el salto online</h2>
         </div>
-      </section>-->
 
-      <section id="sobre-mi" class="reveal about">
-        <h2>Sobre mí</h2>
+        <div class="portfolio-grid">
+          <!-- Proyecto 1: Peluquería -->
+          <article class="portfolio-card fade-in">
+            <div
+              class="portfolio-mockup portfolio-mockup--salon"
+              aria-hidden="true"
+            >
+              <span class="mockup-browser-dot"></span>
+              <span class="mockup-browser-dot"></span>
+              <span class="mockup-browser-dot"></span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-name">Bella Hair Studio</h3>
+              <p class="portfolio-type">Peluquería</p>
+              <p class="portfolio-story">
+                Antes no tenía presencia online → ahora recibe reservas por
+                WhatsApp desde la web.
+              </p>
+            </div>
+          </article>
 
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              Soy Ingeniera en Computación con pasión por crear productos
-              digitales modernos, funcionales y bien diseñados. Me encanta
-              transformar ideas en experiencias reales que aporten valor a las
-              personas y a los negocios.
+          <!-- Proyecto 2: Restaurante -->
+          <a
+            href="https://sabores-del-puerto-fawn.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-card portfolio-card-link fade-in"
+          >
+            <div class="portfolio-image">
+              <img
+                src="imagenes/sabores-del-puerto.png"
+                alt="Vista previa de Sabores del Puerto"
+                class="portfolio-image"
+              />
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-name">Sabores del Puerto</h3>
+              <p class="portfolio-type">Restaurante</p>
+              <p class="portfolio-story">
+                Antes solo tenía Instagram → ahora tiene menú online y reservas
+                directas por WhatsApp.
+              </p>
+            </div>
+          </a>
+
+          <!-- Proyecto 3: Kinesiólogo -->
+          <article class="portfolio-card fade-in">
+            <div
+              class="portfolio-mockup portfolio-mockup--kine"
+              aria-hidden="true"
+            >
+              <span class="mockup-browser-dot"></span>
+              <span class="mockup-browser-dot"></span>
+              <span class="mockup-browser-dot"></span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-name">Espacio Kinesis</h3>
+              <p class="portfolio-type">Consultorio kinesiológico</p>
+              <p class="portfolio-story">
+                Antes dependía del boca a boca → ahora los pacientes agendan
+                turnos desde la web.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ======================================================
+         3. SERVICIOS
+    ======================================================= -->
+      <section id="servicios" class="servicios section">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Servicios</p>
+          <h2 class="section-title">
+            Elegí el plan que mejor le queda a tu negocio
+          </h2>
+        </div>
+
+        <div class="servicios-grid">
+          <!-- Paquete 1 -->
+          <article class="plan-card fade-in">
+            <div class="plan-icon" aria-hidden="true">📄</div>
+            <h3 class="plan-name">Página Básica</h3>
+            <p class="plan-price">Desde $X</p>
+            <p class="plan-desc">
+              Ideal para mostrar tu negocio y que te contacten fácil.
             </p>
+            <ul class="plan-features">
+              <li>Una sola página con toda la info</li>
+              <li>Datos de contacto y ubicación</li>
+              <li>Botón directo a WhatsApp</li>
+              <li>Adaptada a celular</li>
+            </ul>
+            <a
+              href="https://wa.me/59899999999?text=Hola%20Micaela%2C%20me%20interesa%20la%20P%C3%A1gina%20B%C3%A1sica"
+              class="btn btn-outline plan-cta"
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar
+            </a>
+          </article>
 
-            <p>
-              Disfruto trabajar tanto en frontend como en backend, siempre
-              buscando escribir código limpio, escalable y fácil de mantener. Me
-              motiva aprender nuevas tecnologías, enfrentar desafíos y mejorar
-              continuamente mis habilidades.
+          <!-- Paquete 2 -->
+          <article class="plan-card plan-card--featured fade-in">
+            <p class="plan-badge">La más elegida</p>
+            <div class="plan-icon" aria-hidden="true">🗂️</div>
+            <h3 class="plan-name">Página Negocio</h3>
+            <p class="plan-price">Desde $X</p>
+            <p class="plan-desc">
+              Para negocios que quieren mostrar todo lo que ofrecen.
             </p>
+            <ul class="plan-features">
+              <li>Varias secciones (servicios, galería, ubicación)</li>
+              <li>Galería de fotos de tu local o trabajos</li>
+              <li>Formulario de contacto</li>
+              <li>Botón directo a WhatsApp</li>
+            </ul>
+            <a
+              href="https://wa.me/59899999999?text=Hola%20Micaela%2C%20me%20interesa%20la%20P%C3%A1gina%20Negocio"
+              class="btn btn-primary plan-cta"
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar
+            </a>
+          </article>
 
-            <p>
-              Cuando no estoy programando, seguramente me encuentres viendo
-              series, escuchando música o pensando en el próximo proyecto que
-              quiero crear. Sí, mi cerebro nunca descansa… versión developer 😅
+          <!-- Paquete 3 -->
+          <article class="plan-card fade-in">
+            <div class="plan-icon" aria-hidden="true">🛍️</div>
+            <h3 class="plan-name">Tienda Online</h3>
+            <p class="plan-price">Desde $X</p>
+            <p class="plan-desc">
+              Para vender tus productos directamente desde la web.
             </p>
-          </div>
+            <ul class="plan-features">
+              <li>Catálogo completo de productos</li>
+              <li>Todo lo de Página Negocio incluido</li>
+              <li>Organización por categorías</li>
+              <li>Pensada para crecer con tu negocio</li>
+            </ul>
+            <a
+              href="https://wa.me/59899999999?text=Hola%20Micaela%2C%20me%20interesa%20la%20Tienda%20Online"
+              class="btn btn-outline plan-cta"
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar
+            </a>
+          </article>
+        </div>
+      </section>
 
-          <div class="about-image">
-            <img src="./imagenes/37732098.JPG" alt="Foto de Mica" />
+      <!-- ======================================================
+         4. CÓMO TRABAJAMOS — timeline horizontal (vertical en mobile)
+    ======================================================= -->
+      <section id="como-trabajamos" class="proceso section">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Cómo trabajamos</p>
+          <h2 class="section-title">
+            De la idea a tu página online, en 4 pasos
+          </h2>
+        </div>
+
+        <ol class="proceso-timeline">
+          <li class="proceso-step fade-in">
+            <span class="proceso-number">1</span>
+            <h3 class="proceso-title">Charlamos qué necesitás</h3>
+            <p class="proceso-text">
+              Nos comunicamos por WhatsApp o videollamada para entender tu
+              negocio.
+            </p>
+          </li>
+          <li class="proceso-step fade-in">
+            <span class="proceso-number">2</span>
+            <h3 class="proceso-title">Te muestro una propuesta</h3>
+            <p class="proceso-text">
+              Diseño una primera versión de tu página para que la veas.
+            </p>
+          </li>
+          <li class="proceso-step fade-in">
+            <span class="proceso-number">3</span>
+            <h3 class="proceso-title">Hacemos ajustes juntos</h3>
+            <p class="proceso-text">
+              Revisamos y afinamos los detalles hasta que quede como querés.
+            </p>
+          </li>
+          <li class="proceso-step fade-in">
+            <span class="proceso-number">4</span>
+            <h3 class="proceso-title">Tu página lista y online</h3>
+            <p class="proceso-text">
+              Publicamos el sitio y queda funcionando para tus clientes.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ======================================================
+         5. SOBRE MÍ
+    ======================================================= -->
+      <section id="sobre-mi" class="sobre-mi section">
+        <div class="sobre-mi-container fade-in">
+          <div class="sobre-mi-photo" aria-hidden="true"></div>
+          <div class="sobre-mi-text">
+            <p class="section-eyebrow">Sobre mí</p>
+            <h2 class="section-title">Hola, soy Micaela</h2>
+            <p class="sobre-mi-desc">
+              Me dedico a armar páginas web para negocios como el tuyo. Sé lo
+              difícil que es ponerse al día con lo digital cuando el día a día
+              ya te ocupa todo el tiempo, por eso me encargo de que el proceso
+              sea simple, claro y sin vueltas técnicas. Trabajo cerca tuyo en
+              cada paso, para que el resultado final se sienta realmente tuyo.
+            </p>
           </div>
         </div>
       </section>
 
-      <!--<section id="tecnologias" class="reveal">
-        <h2>Tecnologías</h2>
-        <ul class="tech-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Astro</li>
-          <li>Git</li>
-        </ul>
-      </section>-->
+      <!-- ======================================================
+         6. TECNOLOGÍAS — franja discreta, sin protagonismo visual
+    ======================================================= -->
+      <section class="tech-strip" aria-label="Tecnologías utilizadas">
+        <p class="tech-strip-text">
+          Trabajo con: React · JavaScript · HTML5 · CSS3
+        </p>
+      </section>
 
-      <section id="contacto" class="reveal contact">
-        <div class="contact-wrapper">
-          <div class="contact-form">
-            <h2>Contacto</h2>
-            <form id="contact-form">
-              <input type="text" placeholder="Nombre" required />
-              <input type="email" placeholder="Email" required />
-              <textarea placeholder="Mensaje" required></textarea>
-              <button type="submit">Enviar</button>
-            </form>
-            <p id="form-success" class="form-success">
-              ¡Mensaje enviado correctamente! 🚀
-            </p>
+      <!-- ======================================================
+         7. PREGUNTAS FRECUENTES — acordeón (JS)
+    ======================================================= -->
+      <section id="faq" class="faq section">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Preguntas frecuentes</p>
+          <h2 class="section-title">Dudas comunes antes de empezar</h2>
+        </div>
+
+        <div class="faq-list fade-in">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Necesito tener un dominio propio?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                No hace falta que ya lo tengas. Si no tenés uno, te ayudo a
+                elegirlo y configurarlo.
+              </p>
+            </div>
           </div>
 
-          <div class="contact-visual">
-            <div class="glow"></div>
-            <svg viewBox="0 0 200 200" class="blob">
-              <path
-                fill="#6366f1"
-                d="M45.5,-60.5C59.4,-52.3,71.3,-39.7,74.5,-25.4C77.7,-11.2,72.3,4.7,64.2,18.3C56.1,31.9,45.3,43.2,32.3,51.2C19.3,59.3,4.2,64.1,-11.7,67.3C-27.5,70.5,-45.1,72.1,-56.6,64.5C-68.1,56.9,-73.6,40.2,-74.6,24.5C-75.5,8.8,-71.9,-5.9,-64.9,-18.6C-57.9,-31.3,-47.5,-42,-35.3,-50.9C-23.1,-59.7,-9.1,-66.7,4.9,-73.2C18.8,-79.7,37.7,-85.7,45.5,-60.5Z"
-                transform="translate(100 100)"
-              />
-            </svg>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Puedo actualizar el contenido yo misma/o después?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Sí. Te dejo indicaciones simples para hacer cambios básicos de
+                texto e imágenes, y siempre podés pedirme ayuda si necesitás
+                algo más grande.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Cuánto tiempo tarda en estar lista mi página?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Depende del plan elegido, pero en general entre 1 y 3 semanas
+                desde que definimos el contenido.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿El precio incluye hosting?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                El hosting se cotiza aparte según tus necesidades, pero te
+                asesoro para elegir la opción más conveniente.
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>© 2026 · mpwebpages.com</p>
+    <!-- ======================================================
+       8. CONTACTO / FOOTER
+  ======================================================= -->
+    <footer id="contacto" class="footer">
+      <div class="footer-container">
+        <div class="footer-main fade-in">
+          <h2 class="footer-title">¿Hablamos de tu página web?</h2>
+          <p class="footer-subtitle">
+            Contame sobre tu negocio y armamos algo a tu medida.
+          </p>
 
-      <div class="footer-right">
-        <ul class="footer-links">
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-
-        <div class="footer-icons">
-          <a href="https://github.com/prz0308/" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-
-          <a href="https://wa.me/59891530166" target="_blank">
-            <i class="fab fa-whatsapp"></i>
+          <a
+            href="https://wa.me/59899999999?text=Hola%20Micaela%2C%20quiero%20consultar%20sobre%20una%20p%C3%A1gina%20web"
+            class="btn btn-primary footer-whatsapp"
+            target="_blank"
+            rel="noopener"
+          >
+            Escribir por WhatsApp
           </a>
         </div>
+
+        <form class="footer-form fade-in" id="contactForm">
+          <h3 class="footer-form-title">O escribime por acá</h3>
+
+          <label class="form-field">
+            <span class="form-label">Nombre</span>
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+          </label>
+
+          <label class="form-field">
+            <span class="form-label">Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="tu@email.com"
+              required
+            />
+          </label>
+
+          <label class="form-field">
+            <span class="form-label">Mensaje</span>
+            <textarea
+              name="mensaje"
+              rows="4"
+              placeholder="Contame sobre tu negocio..."
+              required
+            ></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-primary form-submit">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year"></span> mpwebpages · Páginas web para negocios
+          locales
+        </p>
       </div>
     </footer>
 
