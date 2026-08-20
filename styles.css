@@ -458,89 +458,6 @@ section[id] {
   box-shadow: var(--shadow-card-hover);
 }
 
-/* Mockup simulado con CSS, sin imágenes reales.
-   Cada rubro tiene una composición de "pantalla" distinta,
-   siempre con el acento usado con moderación. */
-.portfolio-mockup {
-  position: relative;
-  height: 190px;
-  padding: 1.6rem 1.2rem 0;
-  background: #f1f0eb;
-}
-
-.mockup-browser-dot {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--border);
-  margin-right: 5px;
-}
-
-/* Peluquería: bloques tipo galería de fotos */
-.portfolio-mockup--salon {
-  display: grid;
-  align-content: start;
-}
-.portfolio-mockup--salon::after {
-  content: "";
-  display: block;
-  margin-top: 1.1rem;
-  height: 120px;
-  background:
-    linear-gradient(var(--dark), var(--dark)) 0 0 / 48% 46% no-repeat,
-    linear-gradient(var(--accent-soft), var(--accent-soft)) 52% 0 / 48% 46%
-      no-repeat,
-    linear-gradient(var(--accent-soft), var(--accent-soft)) 0 52% / 48% 46%
-      no-repeat,
-    linear-gradient(var(--dark), var(--dark)) 52% 52% / 48% 46% no-repeat;
-  border-radius: var(--radius-sm);
-  opacity: 0.9;
-}
-
-/* Restaurante: lista de menú */
-.portfolio-mockup--resto {
-  display: grid;
-  align-content: start;
-  gap: 10px;
-  padding-top: 1.7rem;
-}
-.portfolio-mockup--resto::after {
-  content: "";
-  display: block;
-  margin-top: 0.9rem;
-  height: 110px;
-  background:
-    linear-gradient(var(--dark), var(--dark)) 0 0 / 62% 14px no-repeat,
-    linear-gradient(var(--border), var(--border)) 0 26px / 40% 10px no-repeat,
-    linear-gradient(var(--dark), var(--dark)) 0 48px / 55% 14px no-repeat,
-    linear-gradient(var(--border), var(--border)) 0 74px / 44% 10px no-repeat,
-    linear-gradient(var(--accent), var(--accent)) 0 96px / 26% 10px no-repeat;
-  border-radius: var(--radius-sm);
-}
-
-/* Kinesiólogo: agenda / calendario */
-.portfolio-mockup--kine {
-  display: grid;
-  align-content: start;
-}
-.portfolio-mockup--kine::after {
-  content: "";
-  display: block;
-  margin-top: 1.1rem;
-  height: 120px;
-  background:
-    linear-gradient(var(--border), var(--border)) 0 0 / 100% 22px no-repeat,
-    linear-gradient(var(--dark), var(--dark)) 0 32px / 30% 30% no-repeat,
-    linear-gradient(var(--accent), var(--accent)) 35% 32% / 30% 30% no-repeat,
-    linear-gradient(var(--dark), var(--dark)) 70% 32% / 30% 30% no-repeat,
-    linear-gradient(var(--accent-soft), var(--accent-soft)) 0 66% / 30% 30%
-      no-repeat,
-    linear-gradient(var(--dark), var(--dark)) 35% 66% / 30% 30% no-repeat,
-    linear-gradient(var(--border), var(--border)) 70% 66% / 30% 30% no-repeat;
-  border-radius: var(--radius-sm);
-}
-
 .portfolio-body {
   padding: 1.5rem 1.4rem 1.7rem;
 }
@@ -795,9 +712,16 @@ section[id] {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-light), var(--accent-soft));
+  overflow: hidden;
   border: 2px solid var(--accent);
   flex-shrink: 0;
+}
+
+.sobre-mi-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .sobre-mi-text {

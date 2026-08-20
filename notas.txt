@@ -1,0 +1,16 @@
+- Revisar las paginas de ejemplo de trabajos
+  - Peluqueria
+  - Restaurante
+  - Kinesiologo
+  - Barberia
+  - Catering
+
+- Precios de los planes
+
+- Revisar texto y responsive preguntas frecuentes
+
+- Cambiar numero de WhatsApp
+
+- Revisar a donde lleva formulario
+
+- Cambiar menu de celular
